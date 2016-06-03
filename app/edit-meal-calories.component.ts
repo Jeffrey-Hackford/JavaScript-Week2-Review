@@ -5,7 +5,7 @@ import { Component } from 'angular2/core';
   selector: 'edit-meal-calories',
   inputs: ['meal'],
   template: `
-  <input ([ngModel])="meal.calories" placeholder="Edit Calories:"/>
+  <input [(ngModel)]="meal.calories" placeholder="Edit Calories:"/>
   `
 })
 
