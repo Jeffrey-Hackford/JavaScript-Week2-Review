@@ -10,7 +10,7 @@ import { Meal } from './meal.model';
   outputs: ['onMealSelect'],
   directives: [MealComponent, EditMealCaloriesComponent, NewMealComponent],
   template: `
-  <new-meal></new-meal>
+  <new-meal (onSubmitNewMeal)="CreateMeal($event)"></new-meal>
   <edit-meal-calories *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-calories>
   <meal-display *ngFor="#currentMeal of mealList"
     (click)="mealClicked(currentMeal)"
@@ -30,5 +30,11 @@ export class MealListComponent {
   mealClicked(clickedMeal: Meal): void {
     this.selectedMeal = clickedMeal;
     this.onMealSelect.emit(clickedMeal)
+  }
+
+  CreateMeal(meal: Meal):void {
+    meal.id = this.mealList.length;
+    this.mealList.push(meal);
+    console.log(this.mealList);
   }
 }
