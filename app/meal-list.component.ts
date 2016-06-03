@@ -1,4 +1,5 @@
 import { Component, EventEmitter } from 'angular2/core';
+import { EditMealCaloriesComponent } from './edit-meal-calories.component';
 import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 
@@ -6,8 +7,9 @@ import { Meal } from './meal.model';
   selector: 'meal-list',
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
-  directives: [MealComponent],
+  directives: [MealComponent, EditMealCaloriesComponent],
   template: `
+  <edit-meal-calories *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-calories>
   <meal-display *ngFor="#currentMeal of mealList"
     (click)="mealClicked(currentMeal)"
     [class.selected]="currentMeal === selectedMeal"

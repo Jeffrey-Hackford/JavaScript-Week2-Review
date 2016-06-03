@@ -5,10 +5,10 @@ import { Component } from 'angular2/core';
   selector: 'edit-meal-calories',
   inputs: ['meal'],
   template: `
-  <h4>Edit Calories: {{meal.calories}}</h4>
+  <input ([ngModel])="meal.calories" placeholder="Edit Calories:"/>
   `
 })
 
-export class EditMealCalories {
+export class EditMealCaloriesComponent {
   public meal: Meal;
 }
