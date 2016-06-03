@@ -8,14 +8,14 @@ import { Meal } from './meal.model';
 
 export class CaloriePipe implements PipeTransform{
   transform(input: Meal[], args) {
-    var calorieCount = args[2];
-    if(calorieCount <= "500") {
-      return input.filter(function(meal) {
-        return meal.name;
+    var calorieCount = args[0];
+    if(calorieCount === "low") {
+      return input.filter((meal) => {
+        return meal.calorieScale;
       });
-    } else if ( calorieCount > "500") {
-      return input.filter(function(meal) {
-        return meal.name;
+    } else if ( calorieCount === "high") {
+      return input.filter((meal) => {
+        return !meal.calorieScale;
       });
     } else {
       return input;

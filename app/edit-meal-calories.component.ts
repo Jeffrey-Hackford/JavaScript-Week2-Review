@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'edit-meal-calories',
   inputs: ['meal'],
   template: `
-  <input [(ngModel)]="meal.calories" placeholder="Edit Calories:"/>
+  <input [(ngModel)]="meal.details" placeholder="Edit Details:"/>
   `
 })
 

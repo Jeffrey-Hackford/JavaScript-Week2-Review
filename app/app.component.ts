@@ -17,8 +17,8 @@ export class AppComponent {
   public meals: Meal[];
   constructor(){
     this.meals = [
-      new Meal("Spaghetti", "Delicious carbs", "500", 0),
-      new Meal("Chicken", "BBQ Grilled", "100", 0)
+      // new Meal("Spaghetti", "Delicious carbs", "500", 0),
+      // new Meal("Chicken", "BBQ Grilled", "100", 0)
     ];
   }
   mealWasSelected(clickedMeal: Meal): void {
