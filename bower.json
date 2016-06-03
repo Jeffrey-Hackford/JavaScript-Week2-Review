@@ -1,9 +1,9 @@
 {
-  "name": "music store",
+  "name": "Meal tracker",
   "description": "",
   "main": "index.js",
   "license": "ISC",
-  "homepage": "https://github.com/droycho/angularToDo.git",
+  "homepage": "https://github.com/jeffrey-hackford/JavaScript-Week2-Review",
   "moduleType": [],
   "ignore": [
     "**/.*",
@@ -16,5 +16,8 @@
     "jquery": "^2.2.4",
     "bootstrap": "^3.3.6",
     "moment": "^2.13.0"
-  }
+  },
+  "authors": [
+    "Jeffrey Hackford <jeffrey.hackford@gmail.com>"
+  ]
 }
